@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="hotelInfo"
+            type="com.example.popularhotelsincity.model.APIModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <ImageView
+                android:id="@+id/hotel_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+                android:scaleType="centerCrop"
+                app:imageUrl="@{hotelInfo}"
+
+
+
+                />
+
+            <TextView
+                android:id="@+id/hotel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:imageText="@{hotelInfo}" />
+
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:layout_marginBottom="16dp"
+                style="?android:attr/ratingBarStyleSmall"
+                app:star="@{hotelInfo}">
+
+            </RatingBar>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
