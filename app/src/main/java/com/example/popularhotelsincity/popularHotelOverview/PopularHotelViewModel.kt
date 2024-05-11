@@ -23,7 +23,7 @@ class PopularHotelViewModel : ViewModel(){
             try {
 
 
-            _popularHotels.value = WegoApi.retrofitService.getPhotos("en","SGD","SG","dxb")
+            _popularHotels.value = WegoApi.retrofitService.getPhotos("en","SGGD","SG","dxb")
 
             }
 
